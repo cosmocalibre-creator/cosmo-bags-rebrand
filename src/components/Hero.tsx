@@ -103,20 +103,20 @@ const Hero = () => {
               />
             ))}
           </div>
-          <div className="inline-block mb-6 px-4 py-2 bg-primary/10 rounded-full">
+          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
             <span className="text-gray-800 dark:text-primary font-semibold text-sm tracking-wide">JUMBO BAG MANUFACTURER IN INDIA</span>
           </div>
           <div className="mb-12">
             <p className="text-2xl md:text-4xl font-bold mb-2">
-              <span className="text-secondary">COSMO&nbsp;</span>
+              <span className="text-secondary dark:text-white">COSMO&nbsp;</span>
               <span className="text-primary">HOLDER</span>
             </p>
-            <p className="text-sm tracking-widest text-black dark:text-white">Customizes FIBC Bags to your preferences.</p>
+            <p className="text-sm tracking-widest text-black dark:text-white mb-1">Customizes FIBC Bags to your preferences.</p>
             <p className="text-sm tracking-widest text-black dark:text-white">It assures you end to end handling of goods, from pickup, transportation &amp; all your storage needs.</p>
           </div>
      
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex justify-center">
             <Button 
               onClick={scrollToContact}
               size="lg" 
@@ -124,15 +124,6 @@ const Hero = () => {
             >
               Request Quote
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              onClick={() => window.open("tel:+919025028532", "_self")}
-              variant="outline" 
-              size="lg" 
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6"
-            >
-              <Phone className="mr-2" size={20} />
-              Call Now
             </Button>
           </div>
           

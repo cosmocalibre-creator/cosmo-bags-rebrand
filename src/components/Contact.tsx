@@ -48,7 +48,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
           <div>
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
             
@@ -84,7 +84,6 @@ const Contact = () => {
                 <div>
                   <p className="font-semibold mb-1">Address</p>
                   <p className="text-muted-foreground">
-                    Block 5 - E305, CasaGrand Supremus,<br />
                     Thalambur, Chennai - 600130,<br />
                     Tamil Nadu, India
                   </p>

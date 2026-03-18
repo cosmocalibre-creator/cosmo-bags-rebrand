@@ -81,13 +81,14 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground leading-tight;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', 'Inter', sans-serif;
     font-weight: 700;
+    @apply leading-tight mb-2 mt-2;
   }
 }
 

@@ -1,10 +1,23 @@
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const header = document.querySelector('header');
+      const headerHeight = header ? header.offsetHeight : 0;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-4 mb-8">
           <div>
             <div className="flex flex-col mb-4">
               <span className="text-3xl font-bold tracking-tight dark:text-white">COSMO</span>
@@ -22,27 +35,27 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <button onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })} className="opacity-75 hover:opacity-100 transition-opacity">
+                <button onClick={() => scrollToSection("home")} className="opacity-75 hover:opacity-100 transition-opacity">
                   Home
                 </button>
               </li>
               <li>
-                <button onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })} className="opacity-75 hover:opacity-100 transition-opacity">
+                <button onClick={() => scrollToSection("about")} className="opacity-75 hover:opacity-100 transition-opacity">
                   About Us
                 </button>
               </li>
               <li>
-                <button onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })} className="opacity-75 hover:opacity-100 transition-opacity">
+                <button onClick={() => scrollToSection("products")} className="opacity-75 hover:opacity-100 transition-opacity">
                   Products
                 </button>
               </li>
               <li>
-                <button onClick={() => document.getElementById("why-us")?.scrollIntoView({ behavior: "smooth" })} className="opacity-75 hover:opacity-100 transition-opacity">
+                <button onClick={() => scrollToSection("why-us")} className="opacity-75 hover:opacity-100 transition-opacity">
                   Why Us
                 </button>
               </li>
               <li>
-                <button onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })} className="opacity-75 hover:opacity-100 transition-opacity">
+                <button onClick={() => scrollToSection("contact")} className="opacity-75 hover:opacity-100 transition-opacity">
                   Contact
                 </button>
               </li>
@@ -88,7 +101,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-secondary-foreground/20 pt-8 text-center text-sm opacity-75">
-          <p>© {new Date().getFullYear()} Cosmo Calibre. All rights reserved. | Powered by Cosmo Holder</p>
+          <p>© {new Date().getFullYear()} Cosmo Calibre. All rights reserved. | Powered by Cosmo Calibre</p>
         </div>
       </div>
     </footer>

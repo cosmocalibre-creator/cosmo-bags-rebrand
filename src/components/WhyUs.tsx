@@ -49,7 +49,7 @@ const WhyUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why Choose <span className="text-primary">Cosmo Holder</span>?
+            Why Choose <span className="text-primary">Cosmo Holder</span><span className="text-primary">?</span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -57,7 +57,7 @@ const WhyUs = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (

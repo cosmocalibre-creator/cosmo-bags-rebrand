@@ -20,11 +20,11 @@ const specifications = [
   },
   {
     title: "Inlet Options",
-    options: ["Fully open", "Skirt", "Spout", "Pyjama", "Flap", "With Tie"],
+    options: ["Fully open", "Skirt", "Spout", "Pyjama", "Flap"],
   },
   {
     title: "Outlet Options",
-    options: ["Closed", "Spout", "Pyjama", "Flap", "With Tie"],
+    options: ["Flat", "Spout", "Pyjama"],
   },
   {
     title: "Fabric Color",
@@ -50,7 +50,7 @@ const Specifications = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           {specifications.map((spec, index) => (
             <Card key={index} className="border-2 hover:border-primary transition-colors">
               <CardHeader>
@@ -69,7 +69,7 @@ const Specifications = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
           <Card className="border-2 border-primary">
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Safe Working Load</CardTitle>

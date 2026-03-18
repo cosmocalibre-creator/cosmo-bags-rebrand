@@ -54,9 +54,9 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           {products.map((product, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary overflow-hidden">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary overflow-hidden flex flex-col h-full">
               <div className="relative overflow-hidden bg-muted/30 h-64">
                 <img
                   src={product.image}
@@ -68,7 +68,7 @@ const Products = () => {
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">{product.name}</CardTitle>
                 <CardDescription className="text-base">{product.description}</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="mt-auto">
                 <Button 
                   onClick={scrollToContact}
                   variant="outline" 
